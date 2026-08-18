@@ -1,0 +1,43 @@
+@page
+@model CreateModel
+@{
+    ViewData["Title"] = "New post";
+}
+
+<div class="form-width">
+    <a class="back-link" asp-page="/Index"><span aria-hidden="true">←</span> Cancel</a>
+    <div class="mt-5 mb-4">
+        <span class="eyebrow">Share something</span>
+        <h1 class="display-5 fw-bold mt-2">Create a new post</h1>
+        <p class="text-secondary">This demo sends your post to JSONPlaceholder. The service simulates creation but does not save it permanently.</p>
+    </div>
+
+    @if (Model.ErrorMessage is not null)
+    {
+        <div class="alert alert-danger" role="alert">@Model.ErrorMessage</div>
+    }
+
+    <form method="post" class="card form-card p-4 p-md-5">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <div class="mb-4">
+            <label asp-for="Post.Title" class="form-label fw-semibold"></label>
+            <input asp-for="Post.Title" class="form-control form-control-lg" placeholder="A clear, descriptive title" autofocus />
+            <span asp-validation-for="Post.Title" class="text-danger small"></span>
+        </div>
+        <div class="mb-4">
+            <label asp-for="Post.Body" class="form-label fw-semibold"></label>
+            <textarea asp-for="Post.Body" class="form-control" rows="7" placeholder="What would you like to share?"></textarea>
+            <span asp-validation-for="Post.Body" class="text-danger small"></span>
+        </div>
+        <div class="mb-4 col-sm-5">
+            <label asp-for="Post.UserId" class="form-label fw-semibold"></label>
+            <input asp-for="Post.UserId" class="form-control" />
+            <span asp-validation-for="Post.UserId" class="text-danger small"></span>
+        </div>
+        <button class="btn btn-primary btn-lg align-self-start" type="submit">Publish post <span aria-hidden="true">→</span></button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

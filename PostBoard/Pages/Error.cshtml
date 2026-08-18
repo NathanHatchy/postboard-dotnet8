@@ -1,0 +1,11 @@
+@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Something went wrong";
+}
+<div class="reading-width text-center py-5">
+    <span class="eyebrow">Unexpected error</span>
+    <h1 class="display-5 fw-bold mt-2">Something went wrong.</h1>
+    <p class="lead text-secondary">Please return to the post list and try again.</p>
+    <a class="btn btn-primary mt-3" asp-page="/Index">Back to posts</a>
+</div>

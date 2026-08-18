@@ -1,0 +1,36 @@
+:root {
+    --ink: #17211b;
+    --paper: #f7f8f3;
+    --accent: #386641;
+    --accent-dark: #274c31;
+    --line: #dfe4dc;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.navbar { background: var(--ink); min-height: 68px; }
+.navbar-brand { letter-spacing: -.04em; }
+.nav-link { color: rgba(255,255,255,.76); }
+.nav-link:hover { color: #fff; }
+.hero { padding: 3rem 0 1rem; }
+.hero h1, h1 { letter-spacing: -.055em; line-height: 1.02; }
+.eyebrow { color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-dark); --bs-btn-hover-border-color: var(--accent-dark); }
+.search-box { width: min(100%, 22rem); }
+.post-card { background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 1rem; color: var(--ink); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.post-card:hover { border-color: #9caf9d; box-shadow: 0 1rem 2.5rem rgba(29,48,35,.09); color: var(--ink); transform: translateY(-4px); }
+.clamp-3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.reading-width { margin-inline: auto; max-width: 48rem; }
+.form-width { margin-inline: auto; max-width: 52rem; }
+.form-card { background: #fff; border: 1px solid var(--line); border-radius: 1rem; }
+.form-control { border-color: #cbd3ca; padding: .75rem 1rem; }
+.form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 .25rem rgba(56,102,65,.13); }
+.back-link { color: var(--ink); font-weight: 650; text-decoration: none; }
+.back-link:hover { color: var(--accent); }
+.post-body { font-size: 1.3rem; line-height: 1.75; white-space: pre-line; }
+.success-mark { align-items: center; background: #dcebdc; border-radius: 50%; color: var(--accent); display: flex; font-size: 2rem; font-weight: 800; height: 5rem; justify-content: center; width: 5rem; }
+
+@media (max-width: 576px) {
+    .hero { padding-top: 1.5rem; }
+    .display-4 { font-size: 2.6rem; }
+}

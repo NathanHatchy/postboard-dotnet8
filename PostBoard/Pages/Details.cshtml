@@ -1,0 +1,14 @@
+@page "posts/{id:int}"
+@model DetailsModel
+@{
+    ViewData["Title"] = Model.Post.Title;
+}
+
+<div class="reading-width">
+    <a class="back-link" asp-page="/Index"><span aria-hidden="true">←</span> All posts</a>
+    <article class="mt-5">
+        <div class="eyebrow mb-3">Post #@Model.Post.Id · User @Model.Post.UserId</div>
+        <h1 class="display-5 fw-bold text-capitalize mb-4">@Model.Post.Title</h1>
+        <p class="post-body lead">@Model.Post.Body</p>
+    </article>
+</div>

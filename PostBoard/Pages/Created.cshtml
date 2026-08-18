@@ -1,0 +1,16 @@
+@page
+@model CreatedModel
+@{
+    ViewData["Title"] = "Post created";
+}
+
+<div class="reading-width text-center py-5">
+    <div class="success-mark mx-auto mb-4" aria-hidden="true">✓</div>
+    <span class="eyebrow">Request successful · ID @Model.PostId</span>
+    <h1 class="display-5 fw-bold text-capitalize mt-2">@Model.PostTitle</h1>
+    <p class="lead text-secondary mt-3">JSONPlaceholder accepted the post. As this is a mock API, it will not appear in the permanent post list.</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a class="btn btn-primary" asp-page="/Create">Create another</a>
+        <a class="btn btn-outline-dark" asp-page="/Index">Back to posts</a>
+    </div>
+</div>
