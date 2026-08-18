@@ -65,6 +65,8 @@ The scope intentionally prioritises polished Read and Create flows. Given more t
 - Add retry/circuit-breaker policies and structured observability for a production service
 - Bundle front-end dependencies locally or through an asset pipeline instead of relying on a CDN
 - Add server-side pagination if the backing API grew beyond this 100-item demo
+- Set limit on page view as 100 posts is excessive, approx 30 would suffice
+- Use Sass instead of Css for frontend flexibility
 
 ## Technology
 
