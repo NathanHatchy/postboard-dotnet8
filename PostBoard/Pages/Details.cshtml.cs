@@ -23,6 +23,8 @@ public sealed class DetailsModel : PageModel
             return NotFound();
         }
 
+        // Shows post data
+
         var post = await _postService.GetPostAsync(id, cancellationToken);
         if (post is null)
         {

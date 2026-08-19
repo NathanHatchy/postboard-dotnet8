@@ -12,9 +12,13 @@
     <nav class="navbar navbar-expand-md navbar-dark border-bottom">
         <div class="container">
             <a class="navbar-brand fw-bold" asp-page="/Index">PostBoard</a>
-            <div class="navbar-nav ms-auto flex-row gap-3">
-                <a class="nav-link" asp-page="/Index">Browse</a>
-                <a class="btn btn-light btn-sm px-3" asp-page="/Create">New post</a>
+            <div class="navbar-nav ms-auto d-flex align-items-center flex-row gap-3">
+                <div>
+                    <a class="nav-link" asp-page="/Index">Browse</a>
+                </div>
+                <div>
+                    <a class="btn btn-light btn-sm px-3" asp-page="/Create">New post</a>
+                </div>
             </div>
         </div>
     </nav>

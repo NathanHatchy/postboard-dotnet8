@@ -15,6 +15,8 @@ public sealed class CreatedModel : PageModel
             return RedirectToPage("/Index");
         }
 
+        // Shows post title as created from prior page
+
         PostId = postId;
         PostTitle = TempData["CreatedPostTitle"] as string ?? "Your post";
         return Page();

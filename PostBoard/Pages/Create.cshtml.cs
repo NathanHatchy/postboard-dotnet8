@@ -32,6 +32,8 @@ public sealed class CreateModel : PageModel
             return Page();
         }
 
+        // Mimics post creation by redirecting to Created page along with post data
+
         try
         {
             var createdPost = await _postService.CreatePostAsync(Post, cancellationToken);

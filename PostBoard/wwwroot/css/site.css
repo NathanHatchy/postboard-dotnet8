@@ -1,9 +1,10 @@
 :root {
-    --ink: #17211b;
-    --paper: #f7f8f3;
+    --ink: #020626;
+    --paper: #fff;
     --accent: #386641;
-    --accent-dark: #274c31;
+    --accent-dark: #386641;
     --line: #dfe4dc;
+    --card: #effaf4;
 }
 
 html { scroll-behavior: smooth; }
@@ -17,7 +18,7 @@ body { background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-
 .eyebrow { color: var(--accent); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-dark); --bs-btn-hover-border-color: var(--accent-dark); }
 .search-box { width: min(100%, 22rem); }
-.post-card { background: rgba(255,255,255,.72); border: 1px solid var(--line); border-radius: 1rem; color: var(--ink); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.post-card { background: var(--card); border: 1px solid var(--line); border-radius: 1rem; color: var(--ink); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .post-card:hover { border-color: #9caf9d; box-shadow: 0 1rem 2.5rem rgba(29,48,35,.09); color: var(--ink); transform: translateY(-4px); }
 .clamp-3 { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .reading-width { margin-inline: auto; max-width: 48rem; }

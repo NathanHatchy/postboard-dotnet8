@@ -18,6 +18,7 @@ public sealed class IndexModel : PageModel
     public IReadOnlyList<Post> Posts { get; private set; } = Array.Empty<Post>();
     public string? ErrorMessage { get; private set; }
 
+    // Gets post data for use in for loop to present posts
     public async Task OnGetAsync(CancellationToken cancellationToken)
     {
         try
